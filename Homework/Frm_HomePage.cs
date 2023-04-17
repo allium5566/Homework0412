@@ -22,6 +22,7 @@ namespace Homework
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HomePage));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -36,8 +37,9 @@ namespace Homework
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -55,12 +57,13 @@ namespace Homework
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1083, 696);
-            this.splitContainer1.SplitterDistance = 130;
+            this.splitContainer1.Size = new System.Drawing.Size(1083, 712);
+            this.splitContainer1.SplitterDistance = 132;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -94,9 +97,18 @@ namespace Homework
             this.splitContainer2.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel2.BackgroundImage")));
             this.splitContainer2.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Transparent;
-            this.splitContainer2.Size = new System.Drawing.Size(1083, 562);
+            this.splitContainer2.Size = new System.Drawing.Size(1083, 576);
             this.splitContainer2.SplitterDistance = 230;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(49, 505);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "考試_Alarm";
+            this.button15.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -106,6 +118,7 @@ namespace Homework
             this.button14.TabIndex = 13;
             this.button14.Text = "考試_Guess";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -115,6 +128,7 @@ namespace Homework
             this.button13.TabIndex = 12;
             this.button13.Text = "PictureViewer";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -228,20 +242,23 @@ namespace Homework
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button15
+            // label1
             // 
-            this.button15.Location = new System.Drawing.Point(49, 505);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "考試_Alarm";
-            this.button15.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "C#作業";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Frm_HomePage
             // 
-            this.ClientSize = new System.Drawing.Size(1083, 696);
+            this.ClientSize = new System.Drawing.Size(1083, 712);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Frm_HomePage";
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -276,6 +293,22 @@ namespace Homework
         {
             Frm_Student_StructForm frm_Student_StructForm = new Frm_Student_StructForm();
             frm_Student_StructForm.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Frm_PictureViewer frm_PictureViewer=new Frm_PictureViewer();
+            frm_PictureViewer.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,5 +52,6 @@ namespace Homework
         private Button button10;
         private Button button9;
         private Button button15;
+        private Label label1;
     }
 }
