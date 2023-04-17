@@ -29,5 +29,11 @@ namespace Homework
         public int Math;
     }
 
-
+    public class Bar
+    {
+        public int Beer;
+        public int Tequila;
+        public int Whiskey;
+        public int Wine;
+    }
 }

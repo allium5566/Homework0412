@@ -36,14 +36,14 @@
             this.btnTequila = new System.Windows.Forms.Button();
             this.btnBeer = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labList = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnCash = new System.Windows.Forms.Button();
-            this.btnCard = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.labAmount = new System.Windows.Forms.Label();
-            this.labList = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCard = new System.Windows.Forms.Button();
+            this.btnCash = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -84,6 +84,7 @@
             this.btnWine.TabIndex = 3;
             this.btnWine.Text = "紅酒 Wine NT320";
             this.btnWine.UseVisualStyleBackColor = true;
+            this.btnWine.Click += new System.EventHandler(this.btnWine_Click);
             // 
             // btnWhiskey
             // 
@@ -96,6 +97,7 @@
             this.btnWhiskey.TabIndex = 2;
             this.btnWhiskey.Text = "威士忌 Whiskey NT350";
             this.btnWhiskey.UseVisualStyleBackColor = true;
+            this.btnWhiskey.Click += new System.EventHandler(this.btnWhiskey_Click);
             // 
             // btnTequila
             // 
@@ -108,6 +110,7 @@
             this.btnTequila.TabIndex = 1;
             this.btnTequila.Text = "龍舌蘭 Tequila NT180";
             this.btnTequila.UseVisualStyleBackColor = true;
+            this.btnTequila.Click += new System.EventHandler(this.btnTequila_Click);
             // 
             // btnBeer
             // 
@@ -120,6 +123,7 @@
             this.btnBeer.TabIndex = 0;
             this.btnBeer.Text = "啤酒 Beer NT120";
             this.btnBeer.UseVisualStyleBackColor = true;
+            this.btnBeer.Click += new System.EventHandler(this.btnBeer_Click);
             // 
             // groupBox2
             // 
@@ -134,6 +138,20 @@
             this.groupBox2.Text = "購物清單 List";
             this.groupBox2.UseWaitCursor = true;
             // 
+            // labList
+            // 
+            this.labList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labList.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labList.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.labList.Location = new System.Drawing.Point(27, 44);
+            this.labList.Name = "labList";
+            this.labList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labList.Size = new System.Drawing.Size(230, 226);
+            this.labList.TabIndex = 2;
+            this.labList.Text = "尚未點餐";
+            this.labList.UseWaitCursor = true;
+            // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -143,6 +161,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "清除清單";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseWaitCursor = true;
             // 
             // groupBox3
             // 
@@ -153,46 +172,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "總金額";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.btnCard);
-            this.groupBox4.Controls.Add(this.btnCash);
-            this.groupBox4.Location = new System.Drawing.Point(273, 216);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(203, 105);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "付款方式";
-            // 
-            // btnCash
-            // 
-            this.btnCash.Location = new System.Drawing.Point(12, 26);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(74, 35);
-            this.btnCash.TabIndex = 0;
-            this.btnCash.Text = "現金";
-            this.btnCash.UseVisualStyleBackColor = true;
-            // 
-            // btnCard
-            // 
-            this.btnCard.Location = new System.Drawing.Point(117, 26);
-            this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(74, 35);
-            this.btnCard.TabIndex = 1;
-            this.btnCard.Text = "信用卡";
-            this.btnCard.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(112, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 14);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "信用卡享九折";
             // 
             // labAmount
             // 
@@ -206,18 +185,45 @@
             this.labAmount.Text = "NT$0";
             this.labAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labList
+            // groupBox4
             // 
-            this.labList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labList.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labList.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.labList.Location = new System.Drawing.Point(27, 44);
-            this.labList.Name = "labList";
-            this.labList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labList.Size = new System.Drawing.Size(230, 226);
-            this.labList.TabIndex = 2;
-            this.labList.Text = "尚未點餐";
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.btnCard);
+            this.groupBox4.Controls.Add(this.btnCash);
+            this.groupBox4.Location = new System.Drawing.Point(273, 216);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(203, 105);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "付款方式";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(112, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 14);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "信用卡享九折";
+            // 
+            // btnCard
+            // 
+            this.btnCard.Location = new System.Drawing.Point(117, 26);
+            this.btnCard.Name = "btnCard";
+            this.btnCard.Size = new System.Drawing.Size(74, 35);
+            this.btnCard.TabIndex = 1;
+            this.btnCard.Text = "信用卡";
+            this.btnCard.UseVisualStyleBackColor = true;
+            // 
+            // btnCash
+            // 
+            this.btnCash.Location = new System.Drawing.Point(12, 26);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(74, 35);
+            this.btnCash.TabIndex = 0;
+            this.btnCash.Text = "現金";
+            this.btnCash.UseVisualStyleBackColor = true;
             // 
             // Bar_POS
             // 
