@@ -162,6 +162,7 @@
             this.btnDelete.Text = "清除清單";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.UseWaitCursor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // groupBox3
             // 
@@ -215,6 +216,7 @@
             this.btnCard.TabIndex = 1;
             this.btnCard.Text = "信用卡";
             this.btnCard.UseVisualStyleBackColor = true;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
             // 
             // btnCash
             // 
@@ -224,6 +226,7 @@
             this.btnCash.TabIndex = 0;
             this.btnCash.Text = "現金";
             this.btnCash.UseVisualStyleBackColor = true;
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // Bar_POS
             // 

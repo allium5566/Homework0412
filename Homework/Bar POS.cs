@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -17,56 +18,80 @@ namespace Homework
             InitializeComponent();
         }
 
-        int tequilaCount = 0;
-        int j = 0;
-        int beerCount = 0;
-        public void Order( )
+        //void Order(string menu,int price,int quantity)
+        //{
+        //    if (quantity > 0)
+        //    {
+        //        order = $"{menu}×{quantity} 共{price * quantity}元";
+        //        labList.Text=order;
+        //        Totalpay();
+        //    }
+        //    else { }
+
+        //}
+        Dictionary<string, int> drinkCounts = new Dictionary<string, int>();
+
+        void Order(string menu, int price, int quantity)
         {
-
-            
-            if (beerCount > 0)
+            if (quantity > 0)
             {
-                string beer = "";
-                beer += $"啤酒×{beerCount}共{180 * beerCount}元";
-                labList.Text = beer;
+                int total = price * quantity;
+                order = $"{menu} × {quantity} 共 {total} 元";
+                drinkCounts[menu] = quantity;  // 將訂購數量保存到字典中
+                labList.Text = string.Join("\n", drinkCounts.Select(kv => $"{kv.Key} × {kv.Value} 共 {kv.Value * price} 元"));
+                Totalpay();
             }
-
+            else { }
         }
+
+
+
+
+
         private void btnBeer_Click(object sender, EventArgs e)
         {
             ++beerCount;
-             Order();
-
-
+            Order("啤酒",120,beerCount);
         }
 
         private void btnTequila_Click(object sender, EventArgs e)
         {
-            string order = "";
-            //tequila += $"龍舌蘭×{i} 共{180 * (i++)}元";
-
-          Order();
-            
-            
-            //int tequilapay = 180 * (i++);
-            
+            ++tequilaCount;
+            Order("龍舌蘭", 180, tequilaCount);
         }
 
         private void btnWhiskey_Click(object sender, EventArgs e)
         {
-            //string whiskey = "";
-            ///*whiskey += $"威士忌×{j} 共{35*/0 * (j++)}元";
-            //labList.Text= whiskey;
-            ////int whiskeypay = 350 * (i++);
+            ++whiskeyCount;
+            Order("威士忌",350,whiskeyCount);
         }
 
         private void btnWine_Click(object sender, EventArgs e)
         {
-            //string wine = "";
-            //wine += $"紅酒×{i} 共{320 * (i++)}元";
-            //int winepay = 320 * (i++);
+            ++wineCount;
+            Order("紅酒",320,wineCount);
+
+            
         }
         
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            labList.Text = "尚未點餐";
+            labAmount.Text= "NT$ 0";
+            
+        }
+        void  Totalpay()
+        {
+            
+            totalpay = 120 * beerCount + 180 * tequilaCount + 350 * whiskeyCount + 320 * wineCount;
+            labAmount.Text=$"NT$ {totalpay}";
+            
+        }
+
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"總金額NT${totalpay} ");
+        }
         
     }
 }
