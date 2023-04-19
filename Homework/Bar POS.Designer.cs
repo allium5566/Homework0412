@@ -123,7 +123,7 @@
             this.btnBeer.TabIndex = 0;
             this.btnBeer.Text = "啤酒 Beer NT120";
             this.btnBeer.UseVisualStyleBackColor = true;
-            this.btnBeer.Click += new System.EventHandler(this.btnBeer_Click);
+            this.btnBeer.Click += new System.EventHandler(this.btnBeer_Click_1);
             // 
             // groupBox2
             // 
@@ -162,6 +162,7 @@
             this.btnDelete.Text = "清除清單";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.UseWaitCursor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // groupBox3
             // 
@@ -215,6 +216,7 @@
             this.btnCard.TabIndex = 1;
             this.btnCard.Text = "信用卡";
             this.btnCard.UseVisualStyleBackColor = true;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click_1);
             // 
             // btnCash
             // 
@@ -224,7 +226,7 @@
             this.btnCash.TabIndex = 0;
             this.btnCash.Text = "現金";
             this.btnCash.UseVisualStyleBackColor = true;
-
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click_1);
             // 
             // Bar_POS
             // 
