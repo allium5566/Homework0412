@@ -31,9 +31,9 @@ namespace Homework
 
     public class Bar
     {
-        public int Beer;
-        public int Tequila;
-        public int Whiskey;
-        public int Wine;
+        public static string Beer;
+        public static string Tequila;
+        public static string Whiskey;
+        public static string Wine;
     }
 }

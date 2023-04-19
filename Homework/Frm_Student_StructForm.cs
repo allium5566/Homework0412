@@ -20,20 +20,29 @@ namespace Homework
         Grade grade = new Grade();
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
             grade.Name = txtName.Text;
             grade.Chinese=int.Parse(txtChinese.Text) ;
             grade.English=int.Parse(txtEnglish.Text) ;
-            grade.Math=int.Parse(txtMath.Text) ;
-
-            
+            grade.Math = int.Parse(txtMath.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             labShow.Text=$"姓名:{grade.Name}\n國文:{grade.Chinese}分\n" +
                 $"英文:{grade.English}分\n數學:{grade.Math}分";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        { 
+            int[] gradenum = { grade.Chinese, grade.English , grade.Math };
+            int max=gradenum.Max(); 
+            int min=gradenum.Min() ;
+
+
+            labShow2.Text = $"最高分科目為 {max}分\n最低分科目為 {min}分";
+
+
         }
     }
 }
