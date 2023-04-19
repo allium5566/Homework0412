@@ -21,6 +21,7 @@ namespace Homework
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HomePage));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace Homework
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,6 +65,16 @@ namespace Homework
             this.splitContainer1.Size = new System.Drawing.Size(1083, 712);
             this.splitContainer1.SplitterDistance = 132;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "C#作業";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // splitContainer2
             // 
@@ -147,6 +157,7 @@ namespace Homework
             this.button11.TabIndex = 10;
             this.button11.Text = "NotePad";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -242,16 +253,6 @@ namespace Homework
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "C#作業";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Frm_HomePage
             // 
             this.ClientSize = new System.Drawing.Size(1083, 712);
@@ -309,6 +310,12 @@ namespace Homework
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Frm_Notepad notepad=new Frm_Notepad();
+            notepad.Show();
         }
     }
 }

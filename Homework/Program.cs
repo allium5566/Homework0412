@@ -16,7 +16,7 @@ namespace Homework
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bar_POS());
+            Application.Run(new Frm_Notepad());
         }
     }
 }

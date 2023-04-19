@@ -83,6 +83,12 @@
     <Compile Include="Frm_Loan_Report.Designer.cs">
       <DependentUpon>Frm_Loan_Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Notepad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Notepad.Designer.cs">
+      <DependentUpon>Frm_Notepad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Painter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Loan_Report.resx">
       <DependentUpon>Frm_Loan_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Notepad.resx">
+      <DependentUpon>Frm_Notepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Painter.resx">
       <DependentUpon>Frm_Painter.cs</DependentUpon>
