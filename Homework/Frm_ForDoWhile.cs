@@ -110,8 +110,30 @@ namespace Homework
                 MessageBox.Show("請輸入數值");
             }
         }
+
+        private void btnfor_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            int numFrom=int.Parse(txtFrom.Text) ;
+            int numTo=int.Parse(txtTo.Text) ;
+            int numStep=int.Parse(txtStep.Text);
+
+            for(int i = numFrom; i <= numTo; i+=numStep)
+            {
+                
+                sum+=i;
+            }
+
+            labResult.Text=$"{numFrom}到{numTo}相隔{numStep-1} \n加總為 {sum.ToString()}" ;
+
+            
+
+            
+        
+            }
+        }
     }
 
        
-    } 
+    
 

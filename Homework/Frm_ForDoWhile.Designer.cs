@@ -48,10 +48,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtStep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnfor = new System.Windows.Forms.Button();
             this.btnwhile = new System.Windows.Forms.Button();
@@ -263,19 +263,19 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "From:";
             // 
-            // textBox2
+            // txtFrom
             // 
-            this.textBox2.Location = new System.Drawing.Point(451, 233);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 22);
-            this.textBox2.TabIndex = 20;
+            this.txtFrom.Location = new System.Drawing.Point(451, 233);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(50, 22);
+            this.txtFrom.TabIndex = 20;
             // 
-            // textBox3
+            // txtTo
             // 
-            this.textBox3.Location = new System.Drawing.Point(451, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 22);
-            this.textBox3.TabIndex = 22;
+            this.txtTo.Location = new System.Drawing.Point(451, 261);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(50, 22);
+            this.txtTo.TabIndex = 22;
             // 
             // label5
             // 
@@ -286,12 +286,12 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "To:";
             // 
-            // textBox4
+            // txtStep
             // 
-            this.textBox4.Location = new System.Drawing.Point(451, 289);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 22);
-            this.textBox4.TabIndex = 24;
+            this.txtStep.Location = new System.Drawing.Point(451, 289);
+            this.txtStep.Name = "txtStep";
+            this.txtStep.Size = new System.Drawing.Size(50, 22);
+            this.txtStep.TabIndex = 24;
             // 
             // label6
             // 
@@ -310,6 +310,7 @@
             this.btnfor.TabIndex = 25;
             this.btnfor.Text = "for";
             this.btnfor.UseVisualStyleBackColor = true;
+            this.btnfor.Click += new System.EventHandler(this.btnfor_Click);
             // 
             // btnwhile
             // 
@@ -337,11 +338,11 @@
             this.Controls.Add(this.btndo);
             this.Controls.Add(this.btnwhile);
             this.Controls.Add(this.btnfor);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtStep);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtTo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -391,10 +392,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFrom;
+        private System.Windows.Forms.TextBox txtTo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtStep;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnfor;
         private System.Windows.Forms.Button btnwhile;

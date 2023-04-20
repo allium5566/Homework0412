@@ -89,6 +89,12 @@
     <Compile Include="Frm_Notepad.Designer.cs">
       <DependentUpon>Frm_Notepad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_OXGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_OXGame.Designer.cs">
+      <DependentUpon>Frm_OXGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Painter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Notepad.resx">
       <DependentUpon>Frm_Notepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_OXGame.resx">
+      <DependentUpon>Frm_OXGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Painter.resx">
       <DependentUpon>Frm_Painter.cs</DependentUpon>
