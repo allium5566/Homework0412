@@ -17,7 +17,61 @@ namespace Homework
         {
             InitializeComponent();
         }
+     
+        private void button_MouseEnter(object sender, EventArgs e)
+        {
+            Button mouseEnter = sender as Button;
+            if (mouseEnter != null)
+            {
+                mouseEnter.FlatAppearance.BorderColor = Color.Red;
+            }
+        }
+        private void button_MouseLeave(object sender, EventArgs e)
+        {
+            Button mouseLeave = sender as Button;
+            if (mouseLeave !=null)
+            {
+                mouseLeave.FlatAppearance.BorderColor = Color.RoyalBlue;
+            }
+        }
 
+        int buttomClick = 0;
+        private void button_MouseClick(object sender, EventArgs e)
+        {
+             buttomClick++;
+         
+            Button clickedButton = sender as Button;
+            if(buttomClick%2==1)
+            {
+                clickedButton.Text = "X";
+            }else if (buttomClick % 2 == 0)
+            {
+                clickedButton.Text = "O";
+            }
+            
+            if (clickedButton != null )
+            {
+                clickedButton.Enabled = false;
+            }
+
+        }
         
+        private void button10_Click(object sender, EventArgs e)    //RESET
+        {
+
+            Button clickedButton = sender as Button;
+            buttomClick = 0;
+            foreach (Control control in panel1.Controls)
+            {
+                clickedButton.Enabled = true;
+                if (control is Button)
+                {
+                    Button button = (Button)control;
+                    // 在這裡對選中的 Button 進行操作
+                    button.Text = "";
+                }
+            }
+
+        }
     }
 }
