@@ -53,9 +53,26 @@ namespace Homework
             {
                 clickedButton.Enabled = false;
             }
+            if (button1.Text.Equals("X") && button2.Text.Equals("X") && button3.Text.Equals("X")||
+                button4.Text.Equals("X") && button5.Text.Equals("X") && button6.Text.Equals("X")||
+                button7.Text.Equals("X") && button8.Text.Equals("X") && button9.Text.Equals("X")||
+                button1.Text.Equals("X") && button5.Text.Equals("X") && button9.Text.Equals("X")||
+                button3.Text.Equals("X") && button5.Text.Equals("X") && button7.Text.Equals("X"))
+
+            {
+                MessageBox.Show("X 獲勝");
+            }
+            if (button1.Text.Equals("O") && button2.Text.Equals("O") && button3.Text.Equals("O") ||
+                button4.Text.Equals("O") && button5.Text.Equals("O") && button6.Text.Equals("O") ||
+                button7.Text.Equals("O") && button8.Text.Equals("O") && button9.Text.Equals("O") ||
+                button1.Text.Equals("O") && button5.Text.Equals("O") && button9.Text.Equals("O") ||
+                button3.Text.Equals("O") && button5.Text.Equals("O") && button7.Text.Equals("O"))
+            {
+                MessageBox.Show("O 獲勝");
+            }
 
         }
-        
+
         private void button10_Click(object sender, EventArgs e)    //RESET
         {
             buttomClick = 0;
@@ -76,6 +93,8 @@ namespace Homework
         {
             Application.Exit();
         }
+        //判斷勝負
+        
 
        
     }
