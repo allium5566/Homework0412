@@ -49,7 +49,7 @@ namespace Homework
                 clickedButton.Text = "O";
             }
             
-            if (clickedButton != null )
+            if (clickedButton != null  )
             {
                 clickedButton.Enabled = false;
             }
@@ -58,20 +58,25 @@ namespace Homework
         
         private void button10_Click(object sender, EventArgs e)    //RESET
         {
-
-            Button clickedButton = sender as Button;
             buttomClick = 0;
             foreach (Control control in panel1.Controls)
             {
-                clickedButton.Enabled = true;
                 if (control is Button)
                 {
-                    Button button = (Button)control;
+                    control.Enabled = true;
+                    //Button button = (Button)control;
                     // 在這裡對選中的 Button 進行操作
-                    button.Text = "";
+                    control.Text = "";
                 }
             }
 
         }
+
+        private void button11_Click(object sender, EventArgs e) //關閉程式
+        {
+            Application.Exit();
+        }
+
+       
     }
 }

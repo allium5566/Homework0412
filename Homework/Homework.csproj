@@ -53,11 +53,29 @@
     <Compile Include="Bar POS.Designer.cs">
       <DependentUpon>Bar POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Alarm.Designer.cs">
+      <DependentUpon>Frm_Alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Calc.Designer.cs">
+      <DependentUpon>Frm_Calc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ForDoWhile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_ForDoWhile.Designer.cs">
       <DependentUpon>Frm_ForDoWhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Guess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Guess.Designer.cs">
+      <DependentUpon>Frm_Guess.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Hello.cs">
       <SubType>Form</SubType>
@@ -106,6 +124,12 @@
     </Compile>
     <Compile Include="Frm_PictureViewer.Designer.cs">
       <DependentUpon>Frm_PictureViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_StudentGradeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_StudentGradeList.Designer.cs">
+      <DependentUpon>Frm_StudentGradeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Student_StructForm.cs">
       <SubType>Form</SubType>

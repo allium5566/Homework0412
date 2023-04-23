@@ -74,7 +74,7 @@ namespace Homework
             this.label1.Size = new System.Drawing.Size(43, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "C#作業";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // splitContainer2
             // 
@@ -119,6 +119,7 @@ namespace Homework
             this.button15.TabIndex = 14;
             this.button15.Text = "考試_Alarm";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -194,6 +195,7 @@ namespace Homework
             this.button7.TabIndex = 6;
             this.button7.Text = "MyCalc";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -203,6 +205,7 @@ namespace Homework
             this.button6.TabIndex = 5;
             this.button6.Text = "StudentGrade_List";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -304,18 +307,36 @@ namespace Homework
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            Frm_Guess frm_guess=new Frm_Guess();
+            frm_guess.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button11_Click(object sender, EventArgs e)
         {
             Frm_Notepad notepad=new Frm_Notepad();
             notepad.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Frm_Alarm frm_Alarm=new Frm_Alarm();
+            frm_Alarm.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)//mycalc
+        {
+            Frm_Calc frm_Calc=new Frm_Calc();
+            frm_Calc.Show();
+
+           
+        }
+
+        private void button6_Click(object sender, EventArgs e)//studentlist
+        {
+            Frm_StudentGradeList frm_SGL=new Frm_StudentGradeList();
+            frm_SGL.Show();
         }
     }
 }
