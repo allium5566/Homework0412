@@ -213,7 +213,7 @@ namespace Homework
 
             for (int i = 0; i < open.Length; i++)
             {
-                int index = random.Next(lottery.Length - i);
+                int index = random.Next(lottery.Length - i);//chat說的丟進來。但這到底是啥
                 open[i] = lottery[index];
                 lottery[index] = lottery[lottery.Length - i - 1];
             }
@@ -223,6 +223,13 @@ namespace Homework
                 result += $"{i} ";
                 labResult.Text =$"樂透號碼\n [ {result} ]";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int num = 100;
+            string binary=Convert.ToString(num, 2);
+            labResult.Text = binary;
         }
     }
     }
