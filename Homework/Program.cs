@@ -16,7 +16,7 @@ namespace Homework
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_ForDoWhile());
+            Application.Run(new Frm_Alarm());
         }
     }
 }

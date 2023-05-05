@@ -16,5 +16,15 @@ namespace Homework
         {
             InitializeComponent();
         }
+
+        private void timerDateTime_Tick(object sender, EventArgs e)
+        {
+            labTime.Text = DateTime.Now.ToString();
+        }
+
+        private void Frm_Alarm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

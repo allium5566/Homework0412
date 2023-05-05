@@ -156,6 +156,9 @@
     <EmbeddedResource Include="Bar POS.resx">
       <DependentUpon>Bar POS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Alarm.resx">
+      <DependentUpon>Frm_Alarm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Calc.resx">
       <DependentUpon>Frm_Calc.cs</DependentUpon>
     </EmbeddedResource>

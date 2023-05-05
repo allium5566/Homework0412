@@ -37,17 +37,6 @@ namespace Homework
             picShow.FormBorderStyle = FormBorderStyle.Sizable;
             picShow.Show();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            PicShow(pictureBox2);
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -57,17 +46,7 @@ namespace Homework
         {
             PictureBox pb = sender as PictureBox;
             PicShow(pb);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
+        }       
     }
 
 }
