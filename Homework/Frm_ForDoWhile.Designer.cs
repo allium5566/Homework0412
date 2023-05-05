@@ -46,7 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labResult = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRows = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtFrom = new System.Windows.Forms.TextBox();
             this.txtTo = new System.Windows.Forms.TextBox();
@@ -56,6 +56,10 @@
             this.btnfor = new System.Windows.Forms.Button();
             this.btnwhile = new System.Windows.Forms.Button();
             this.btndo = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -247,17 +251,17 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "rows:";
             // 
-            // textBox1
+            // txtRows
             // 
-            this.textBox1.Location = new System.Drawing.Point(763, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 22);
-            this.textBox1.TabIndex = 18;
+            this.txtRows.Location = new System.Drawing.Point(763, 223);
+            this.txtRows.Name = "txtRows";
+            this.txtRows.Size = new System.Drawing.Size(70, 22);
+            this.txtRows.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(417, 238);
+            this.label4.Location = new System.Drawing.Point(389, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 12);
             this.label4.TabIndex = 19;
@@ -265,14 +269,14 @@
             // 
             // txtFrom
             // 
-            this.txtFrom.Location = new System.Drawing.Point(451, 233);
+            this.txtFrom.Location = new System.Drawing.Point(423, 229);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(50, 22);
             this.txtFrom.TabIndex = 20;
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(451, 261);
+            this.txtTo.Location = new System.Drawing.Point(423, 257);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(50, 22);
             this.txtTo.TabIndex = 22;
@@ -280,7 +284,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(417, 266);
+            this.label5.Location = new System.Drawing.Point(389, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 12);
             this.label5.TabIndex = 21;
@@ -288,7 +292,7 @@
             // 
             // txtStep
             // 
-            this.txtStep.Location = new System.Drawing.Point(451, 289);
+            this.txtStep.Location = new System.Drawing.Point(423, 285);
             this.txtStep.Name = "txtStep";
             this.txtStep.Size = new System.Drawing.Size(50, 22);
             this.txtStep.TabIndex = 24;
@@ -296,7 +300,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(417, 294);
+            this.label6.Location = new System.Drawing.Point(389, 290);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 12);
             this.label6.TabIndex = 23;
@@ -304,7 +308,7 @@
             // 
             // btnfor
             // 
-            this.btnfor.Location = new System.Drawing.Point(544, 228);
+            this.btnfor.Location = new System.Drawing.Point(516, 224);
             this.btnfor.Name = "btnfor";
             this.btnfor.Size = new System.Drawing.Size(75, 23);
             this.btnfor.TabIndex = 25;
@@ -314,27 +318,85 @@
             // 
             // btnwhile
             // 
-            this.btnwhile.Location = new System.Drawing.Point(544, 260);
+            this.btnwhile.Location = new System.Drawing.Point(516, 256);
             this.btnwhile.Name = "btnwhile";
             this.btnwhile.Size = new System.Drawing.Size(75, 23);
             this.btnwhile.TabIndex = 26;
             this.btnwhile.Text = "while";
             this.btnwhile.UseVisualStyleBackColor = true;
+            this.btnwhile.Click += new System.EventHandler(this.btnwhile_Click);
             // 
             // btndo
             // 
-            this.btndo.Location = new System.Drawing.Point(544, 289);
+            this.btndo.Location = new System.Drawing.Point(516, 285);
             this.btndo.Name = "btndo";
             this.btndo.Size = new System.Drawing.Size(75, 23);
             this.btndo.TabIndex = 27;
             this.btndo.Text = "do";
             this.btndo.UseVisualStyleBackColor = true;
+            this.btndo.Click += new System.EventHandler(this.btndo_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Maroon;
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(699, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 27);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "100的二進位";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Maroon;
+            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(699, 60);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 27);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "樂透int[] 號碼不重複";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Maroon;
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(699, 104);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(134, 27);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "直角聖誕樹";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Maroon;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(699, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(134, 27);
+            this.button6.TabIndex = 31;
+            this.button6.Text = "九九乘法表";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Frm_ForDoWhile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 517);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btndo);
             this.Controls.Add(this.btnwhile);
             this.Controls.Add(this.btnfor);
@@ -344,7 +406,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRows);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labResult);
             this.Controls.Add(this.label2);
@@ -390,7 +452,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labResult;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRows;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.TextBox txtTo;
@@ -400,5 +462,9 @@
         private System.Windows.Forms.Button btnfor;
         private System.Windows.Forms.Button btnwhile;
         private System.Windows.Forms.Button btndo;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
